@@ -74,6 +74,7 @@ body.home { background:#191919; }
 .citybeach .display { background:url(../images/display-citybeach.jpg) no-repeat; background-size:cover; background-position:center center;  }
 .his .display { background:url(../images/display-his.jpg) no-repeat; background-size:cover; background-position:center center;  }
 .xpointo .display { background:url(../images/display-xpointo.jpg) no-repeat; background-size:cover; background-position:center center;  }
+.dusit .display { background:url(../images/display-dusit.jpg) no-repeat; background-size:cover; background-position:center center;  }
 
 /* shadow */
 .shd { box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.25); }
@@ -91,7 +92,7 @@ body.home { background:#191919; }
 .inner { position: relative; display: table-cell; vertical-align: middle; }
 
 /* header */
-header { position:relative; background:#2e3192; display:block; height:10px; }
+header { position:relative; background:#191919; display:block;   }
 
 /* footer */
 footer { position:relative; background:#191919; display:block; min-height:200px; padding:100px 60px; height:100%; top:-1px; }
@@ -106,6 +107,32 @@ ul.icon li { width:42px; height:42px; display:inline-block;  }
 ul.icon li a { text-decoration:none; }
 ul.icon li a img { opacity:0.4; -webkit-filter: grayscale(100%); filter: grayscale(100%);  }
 ul.icon li a:hover img { opacity:1; -webkit-filter: none; filter: none; }
+
+/* animation */
+.gradient {
+height:4px;
+background: linear-gradient(270deg, #bdfffd, #345995, #541388, #ff206e, #ffff03);
+background-size: 1000% 1000%;
+-webkit-animation: colors 30s ease infinite;
+-moz-animation: colors 30s ease infinite;
+animation: colors 30s ease infinite;
+}
+
+@-webkit-keyframes colors {
+    0%{background-position:0% 51%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 51%}
+}
+@-moz-keyframes colors {
+    0%{background-position:0% 51%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 51%}
+}
+@keyframes colors { 
+    0%{background-position:0% 51%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 51%}
+}
 
 @media screen and (max-width:64em) {
 .project section { padding:20px; }	
