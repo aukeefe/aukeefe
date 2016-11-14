@@ -1,5 +1,5 @@
 /* fonts */
-body { font-family: 'Roboto', Arial, sans-serif; background:#eeeeee; }
+body { font-family: 'Roboto', Arial, sans-serif; background:#eeeeee; overflow-x: hidden; }
 h1, h2, h3, h4, h5, h6 { font-family: 'Montserrat', Arial, sans-serif; font-weight:700; margin:0; line-height:1em; }
 .title { text-transform:uppercase; }
 h1 { font-size:56px; color: rgba(51,51,51,1); }
@@ -60,7 +60,7 @@ button:focus { outline:0; }
 body.home { background:#191919; }
 
 /* reveal */
-.full.reveal { padding:0; background-color:#eeeeee;  }
+.full.reveal { padding:0; background-color:#eeeeee; overflow-x: hidden;   }
 .full .close-button { position:fixed; z-index:99; right:25px; top:10px; width:60px; height:60px; background: rgba(25,25,25,0.2); border-radius: 50%; }
 .full .close-button span { font-size:40px; color:rgba(255,255,255,1); }
 .full .close-button:hover { background: rgba(25,25,25,1); }
@@ -68,13 +68,15 @@ body.home { background:#191919; }
 
 /* bg display */
 .display { position:relative; width: 100%; height: 1000px;  }
-.footer { position:absolute; width: 100%; height: 500px;  }
+.footer { position:absolute; width: 100%; height: 600px;  }
 .scoot .display { background:url(../images/display-scoot.jpg) no-repeat; background-size:cover; background-position:center center;  }
 .wotif .display { background:url(../images/display-wotif.jpg) no-repeat; background-size:cover; background-position:center center;  }
 .citybeach .display { background:url(../images/display-citybeach.jpg) no-repeat; background-size:cover; background-position:center center;  }
 .his .display { background:url(../images/display-his.jpg) no-repeat; background-size:cover; background-position:center center;  }
 .xpointo .display { background:url(../images/display-xpointo.jpg) no-repeat; background-size:cover; background-position:center center;  }
 .dusit .display { background:url(../images/display-dusit.jpg) no-repeat; background-size:cover; background-position:center center;  }
+.salecycle .display { background:url(../images/display-salecycle.jpg) no-repeat; background-size:cover; background-position:center center;  }
+.ebay .display { background:url(../images/display-ebay.jpg) no-repeat; background-size:cover; background-position:center center;  }
 
 /* shadow */
 .shd { box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.25); }
@@ -95,7 +97,7 @@ body.home { background:#191919; }
 header { position:relative; background:#191919; display:block;   }
 
 /* footer */
-footer { position:relative; background:#191919; display:block; min-height:200px; padding:100px 60px; height:100%; top:-1px; }
+footer { position:relative; background:#191919; display:block; min-height:200px; padding:100px 60px;  }
 footer p, footer h3 { text-align:center; }
 footer p { font-size:13px; color:#999999; }
 footer h3 { font-size:38px; color:#ffff03; margin:40px 0 20px 0; }
@@ -118,6 +120,12 @@ background-size: 1000% 1000%;
 animation: colors 30s ease infinite;
 }
 
+.fadeIn {
+	animation:fadeIn 1s ease-in;
+    -webkit-animation:fadeIn 1s ease-in;	
+	visibility: visible !important;	
+}
+
 @-webkit-keyframes colors {
     0%{background-position:0% 51%}
     50%{background-position:100% 50%}
@@ -134,7 +142,21 @@ animation: colors 30s ease infinite;
     100%{background-position:0% 51%}
 }
 
-@media screen and (max-width:64em) {
+@keyframes fadeIn {
+	from { opacity:0; } to { opacity:1; }
+}
+
+@-webkit-keyframes fadeIn {
+	from { opacity:0; } to { opacity:1; }
+}
+
+/* (max-width:1280px) */
+@media screen and (max-width: 80em) {
+.overlay-fade-in h3 { font-size:3vw; }
+}
+
+/* (max-width:1024px) */
+@media screen and (max-width: 64em) {
 .project section { padding:20px; }	
 .project .columns { margin:20px 0; }
 h1 { font-size:42px; }
@@ -150,13 +172,18 @@ img.large-no-margin { margin:0 auto; }
 footer { padding:40px 20px; }
 }
 
+/* (min-width:640px) and (max-width:1023px) */
+@media screen and (min-width: 40em) and (max-width: 63.9375em) {
+.overlay-fade-in h3 { font-size:12vw; }	
+}
+
+/* (max-width:639px) */
 @media screen and (max-width: 39.9375em) {
 .project .small-align-center { display:table; margin-left:auto; margin-right:auto; }
 img.no-margin { margin:0 auto; }
 .footer { height: 300px;  }
 .sm-center { text-align:center; }
 .no-pad > .columns { padding-left: 0; padding-right: 0; }
-.overlay-fade-in h3 { margin-bottom:40px; }
 .overlay-fade-in p { font-size:12px; }
-.overlay-fade-in h3 { font-size:32px; }
+.overlay-fade-in h3 { font-size:10vw; }
 }
