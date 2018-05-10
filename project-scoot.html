@@ -7,9 +7,9 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:700|Roboto:400,500,700">
     <link rel="stylesheet" href="css/foundation.min.css">
     <link rel="stylesheet" href="css/aos.min.css">
-    <link rel="stylesheet" href="css/jquery.fullpage.min.css">	  
+	<link rel="stylesheet" href="css/jquery.fullpage.min.css">  
     <link rel="stylesheet" href="css/style.css">
-	  <title>Keefe Au | Designer</title>
+    <title>Keefe Au | Designer</title>
   </head>
   <body>
   <button class="close-button" data-close aria-label="Close modal" type="button">
@@ -18,7 +18,7 @@
   <!-- Start of project -->
    <div id="fullpage" class="project case-study scoot">
    
-   	 <section class="row expanded display shd"> 
+   	 <section class="row expanded display shd section fp-auto-height-responsive"> 
 		<div class="container">
         	
          
@@ -29,7 +29,7 @@
 <!-- Start of content -->
 
   	
-  	 <section class="row expanded"> 
+  	 <section class="row expanded section fp-auto-height-responsive"> 
 		<div class="container">
         
        		<div class="large-12 columns">
@@ -71,7 +71,7 @@ I am also assigned to create an On-Site marketing modal box on their flight paym
     
      
     
-    <section class="row expanded"> 
+    <section class="row expanded section fp-auto-height-responsive"> 
 		<div class="container">
         	 <!-- Start of section -->
             <div class="large-12 columns">
@@ -395,7 +395,7 @@ The most common errors usually happen in Outlook especially Outlook version 2007
        </div>
     </section>
     
-    <section class="row expanded footer display shd"> 
+    <section class="row expanded footer display shd section fp-auto-height-responsive"> 
 		<div class="container">
         
          
@@ -415,12 +415,14 @@ The most common errors usually happen in Outlook especially Outlook version 2007
     
  	<script src="js/jquery.js"></script>
     <script src="js/foundation.min.js"></script>  
-    <script src="js/aos.min.js"></script>  
-    <script src="js/jquery.fullpage.min.js"></script>	  
+    <script src="js/aos.min.js"></script> 
+	<script src="js/jquery.fullpage.min.js"></script>   
     <script>
 		$(document).foundation();
-	    $(document).ready(function() {
-	$('#fullpage').fullpage();
+		$(document).ready(function() {
+	$('#fullpage').fullpage({
+		scrollOverflow: true
+	});
 });
 	</script>
   </body>
