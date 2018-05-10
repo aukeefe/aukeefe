@@ -422,11 +422,6 @@ The most common errors usually happen in Outlook especially Outlook version 2007
 		$(document).ready(function() {
 	$('#fullpage').fullpage({
 		scrollOverflow: true,
-		onLeave: function(index, nextIndex, direction){
-		//it won't scroll if the destination is the 3rd section
-		if(nextIndex == 3){
-			return false;
-		}
 	});
 });
 	</script>
